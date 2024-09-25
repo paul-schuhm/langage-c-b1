@@ -1,9 +1,14 @@
 # Langage C : Module 02 - Premiers pas en C - Corrections
 
 - [Langage C : Module 02 - Premiers pas en C - Corrections](#langage-c--module-02---premiers-pas-en-c---corrections)
+  - [Code source](#code-source)
   - [Partie 1 : Anatomie d'un premier programme C](#partie-1--anatomie-dun-premier-programme-c)
   - [Partie 2 : Nouvelles idées](#partie-2--nouvelles-idées)
 
+
+## Code source
+
+[Accéder aux sources C commentées](./sources/)
 
 ## Partie 1 : Anatomie d'un premier programme C
 

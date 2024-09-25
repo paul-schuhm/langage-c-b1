@@ -1,31 +1,46 @@
 # B1 - Langage C
 
-L'ensemble des sources et corrections du cours Langage C
+L'ensemble des sources et corrections du cours Langage C.
 
-## Télécharger ou faire une copie du dépôt
 
-Vous pouvez télécharger le dépôt au format zip. Une autre solution est d'installer `git` sur votre machine puis de taper la commande :
+- [B1 - Langage C](#b1---langage-c)
+  - [Télécharger ou faire une copie du dépôt sur votre machine](#télécharger-ou-faire-une-copie-du-dépôt-sur-votre-machine)
+  - [Sources](#sources)
+    - [Module 02 - Tutoriel et premiers pas](#module-02---tutoriel-et-premiers-pas)
+  - [Bibliographie](#bibliographie)
+    - [Livres](#livres)
+    - [Sur le web (articles, sites)](#sur-le-web-articles-sites)
+    - [Vidéos - Conférences](#vidéos---conférences)
+
+
+## Télécharger ou faire une copie du dépôt sur votre machine
+
+Vous pouvez [télécharger le dépôt au format zip](https://github.com/paul-schuhm/langage-c-b1/archive/refs/heads/main.zip). 
+
+Une autre solution (recommandée) est d'installer [`git`](https://git-scm.com/downloads) sur votre machine. Ouvrir un terminal puis taper la commande :
 
 ~~~bash
-git clone 
-
+git clone https://github.com/paul-schuhm/langage-c-b1
 ~~~
 
+Lorsque le dépôt sera mis à jour, vous pouvez mettre à jour votre copie locale simplement. Ouvrir un terminal dans le dossier du dépôt (ou en [vous y déplacer](./module-02-tutoriel-premiers-pas/installation-environnement-c.md#annexes--se-déplacer-dans-le-terminal-de-windows-invite-de-commandes-ou-powershell)) et récupérer la nouvelle version avec la commande
+
+~~~bash
+cd /chemin/depot/clone
+git pull
+~~~
 
 ## Sources
 
 ### Module 02 - Tutoriel et premiers pas
 
-
-- Accéder aux instructions pour installer l'environnement de développement sur Windows, GNU/Linux et macOS;
-- Accéder à la correction:
-- Accéder aux sources des démonstrations commentées;
-
+- [Accéder aux instructions pour installer l'environnement de développement](./module-02-tutoriel-premiers-pas/installation-environnement-c.md) sur Windows, GNU/Linux et macOS;
+- [Accéder à la correction du tutoriel et aux sources C](./module-02-tutoriel-premiers-pas/):
 
 
 ## Bibliographie
 
-## Livres
+### Livres
 
 > Ces ouvrages se trouvent facilement sur le web...
 
@@ -33,11 +48,13 @@ git clone
 - [Programmer en langage C, 5e édition: Cours et exercices corrigés.](https://www.eyrolles.com/Informatique/Livre/programmer-en-langage-c-9782212118254/), de Claude Delannoy, publié chez Eyrolles, 2016.
 - [C poket reference : C syntax and fundamentals](https://www.oreilly.com/library/view/c-pocket-reference/0596004362/), de Peter Prinz et Ulla Kirch-Prinz, publié chez O'Reilly, 2002. Un livre à garder près de soi pour vérifier rapidement une information précise.
 
-## Articles / Sites web
+### Sur le web (articles, sites)
 
+- [Apprenez à programmer en C](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c), d'OpenClassRoom (ex Site du zéro). Ce cours en ligne est un bon cours à suivre pour s'initier au langage C.
+- [Beej's Guide to C Programming](https://beej.us/guide/bgc/), un très bon cours sur le C [en ligne](https://beej.us/guide/bgc/html/split-wide/) ou en PDF (en)
 
-## Vidéos - Conférences
+### Vidéos - Conférences
 
-- [Standford University - C programming](https://www.youtube.com/watch?v=Ps8jOj7diA0&list=PLjn3WmBeabPOUzxcCkzk4jYMGRZMZ6ylF), de Jerry Cain dans le cours *Programming Paradigms* (CS107), Stanford University, Computer Science department. Série de cours sur les différents paradigmes de programmation, et notamment sur le langage C. Pour aller plus loin
+- [Standford University - C programming](https://www.youtube.com/watch?v=Ps8jOj7diA0&list=PLjn3WmBeabPOUzxcCkzk4jYMGRZMZ6ylF), de Jerry Cain dans le cours *Programming Paradigms* (CS107), Stanford University, Computer Science department. Série de cours sur les différents paradigmes de programmation, et notamment sur le langage C. Pour aller plus loin (en anglais)
 
  

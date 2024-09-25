@@ -9,7 +9,7 @@ L'ensemble des sources et corrections du cours Langage C.
     - [Module 02 - Tutoriel et premiers pas](#module-02---tutoriel-et-premiers-pas)
   - [Bibliographie](#bibliographie)
     - [Livres](#livres)
-    - [Sur le web (articles, sites)](#sur-le-web-articles-sites)
+    - [Sur le web (articles, cours, exercices)](#sur-le-web-articles-cours-exercices)
     - [Vidéos - Conférences](#vidéos---conférences)
 
 
@@ -48,10 +48,13 @@ git pull
 - [Programmer en langage C, 5e édition: Cours et exercices corrigés.](https://www.eyrolles.com/Informatique/Livre/programmer-en-langage-c-9782212118254/), de Claude Delannoy, publié chez Eyrolles, 2016.
 - [C poket reference : C syntax and fundamentals](https://www.oreilly.com/library/view/c-pocket-reference/0596004362/), de Peter Prinz et Ulla Kirch-Prinz, publié chez O'Reilly, 2002. Un livre à garder près de soi pour vérifier rapidement une information précise.
 
-### Sur le web (articles, sites)
+### Sur le web (articles, cours, exercices)
 
 - [Apprenez à programmer en C](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c), d'OpenClassRoom (ex Site du zéro). Ce cours en ligne est un bon cours à suivre pour s'initier au langage C.
 - [Beej's Guide to C Programming](https://beej.us/guide/bgc/), un très bon cours sur le C [en ligne](https://beej.us/guide/bgc/html/split-wide/) ou en PDF (en)
+- [Exercices de programmation en langage C](https://www.electro-info.ovh/exercices-de-programmation-langage-c-debutant)
+- [Exercices Interactifs](http://ressources.unit.eu/cours/Cfacile/co/Cours_C_facile_16.html)
+
 
 ### Vidéos - Conférences
 

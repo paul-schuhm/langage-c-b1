@@ -4,7 +4,10 @@
   - [Code source](#code-source)
   - [Partie 1 : Anatomie d'un premier programme C](#partie-1--anatomie-dun-premier-programme-c)
   - [Partie 2 : Nouvelles idées](#partie-2--nouvelles-idées)
+    - [Constantes symboliques](#constantes-symboliques)
 
+
+> Ce tutoriel est en grande partie basé sur le premier chapitre de l'ouvrage The C programming Language (K&R). Il vous a été fourni en PDF.
 
 ## Code source
 
@@ -16,7 +19,6 @@
 5. Si l'argument `\c` est placé on obtient un *warning* (avertissement) de la part du compilateur. Il nous prévient que ce caractère n'existe pas. Un *warning*, par défaut, n'empêche pas la compilation et la production de l'exécutable. Mais le comportement de ce dernier peut être indéfini ou indésirable. On en conclut donc ici que `\c` n'existe pas. 
 
 ## Partie 2 : Nouvelles idées
-
 
 1. Les *variables* de ce programme sont :
    1. La température en Fahrenheit, encodée par la variable `fahr`;
@@ -39,7 +41,13 @@ gcc conversion.c -o conversion
 printf("%3d\t%6d\n", fahr, celsius);
 ~~~
 
-On le fait grâce aux spécificateurs (ou codes) de format `%xd` où `x` représente le nombre minimal de caractères sur lequel écrire la valeur (la *largeur*), `d` représente une valeur à interpréter comme un nombre entier (`int`). 
+On le fait grâce aux spécificateurs (ou codes) de format `%xd` où `x` représente le nombre minimal de caractères sur lequel écrire la valeur (la *largeur*), `d` représente une valeur à interpréter comme un nombre entier (`int`). S'il reste des emplacements de caractère vides, ils sont placés à gauche (*padding*) par défaut.
+
+4. Il faut penser à également modifier les spécificateurs de format `%d` en `%f`, sinon le programme va essayer d'interpréter les nombres flottant comme des entiers et produire des valeurs aberrantes.
+
+5. Le spécificateur de format `%x.yf` indique qu'il faut écrire le nombre flottant (y compris le `.`) sur `x` caractères (*largeur*) minimum avec `y` chiffres après la virgule.
+
+### Constantes symboliques
 
 Oui il existe des valeurs constantes : 
 

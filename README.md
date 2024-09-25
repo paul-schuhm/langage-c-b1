@@ -34,7 +34,7 @@ git pull
 
 ### Module 02 - Tutoriel et premiers pas
 
-- [Accéder aux instructions pour installer l'environnement de développement](./module-02-tutoriel-premiers-pas/installation-environnement-c.md) sur Windows, GNU/Linux et macOS;
+- [Accéder aux instructions pour installer l'environnement de développement](./installation-environnement-c.md) sur Windows, GNU/Linux et macOS;
 - [Accéder à la correction du tutoriel et aux sources C](./module-02-tutoriel-premiers-pas/):
 
 

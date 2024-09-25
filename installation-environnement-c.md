@@ -102,7 +102,7 @@ Pour exécuter WSL 2, vous devez au préalable *activer la plateforme de machine
 Pour activer la plateforme de virtualisation, redémarrer votre machine, appuyez sur `F2` ou la touche indiquée indiquée par votre carte-mère pour accéder au BIOS. Vous devez également vous assurer que les fonctionnalités Plateforme de l'hyperviseur Windows et Plateforme de machine virtuelle sont bien activées. Tapez `“fonctionnalités windows”` dans votre barre de recherche, puis activez-les. **Redémarrez votre machine**. 
 
 
-<img width="80%" src="../assets/wsl.png"/>
+<img width="80%" src="./assets/wsl.png"/>
 
 Vérifier l'installation en tapant la commande suivante dans l'invite de commande windows :
 

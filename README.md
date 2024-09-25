@@ -17,7 +17,7 @@ L'ensemble des sources et corrections du cours Langage C.
 
 Vous pouvez [télécharger le dépôt au format zip](https://github.com/paul-schuhm/langage-c-b1/archive/refs/heads/main.zip). 
 
-Une autre solution (recommandée) est d'installer [`git`](https://git-scm.com/downloads) sur votre machine. Ouvrir un terminal puis taper la commande :
+Une autre solution (recommandée) est d'installer [`git`](https://git-scm.com/downloads) sur votre machine. Ouvrir un terminal puis taper la commande:
 
 ~~~bash
 git clone https://github.com/paul-schuhm/langage-c-b1

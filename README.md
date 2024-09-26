@@ -69,7 +69,7 @@ git pull
 - [Beej's Guide to C Programming](https://beej.us/guide/bgc/), un très bon cours sur le C [en ligne](https://beej.us/guide/bgc/html/split-wide/) ou en PDF (en)
 - [Exercices de programmation en langage C](https://www.electro-info.ovh/exercices-de-programmation-langage-c-debutant)
 - [Exercices Interactifs](http://ressources.unit.eu/cours/Cfacile/co/Cours_C_facile_16.html)
-
+- [Compilateur C en ligne](https://www.mycompiler.io/fr/new/c), pratique pour tester rapidement des idées. Ctr+Entree pour compiler et executer son code.
 
 ### Vidéos - Conférences
 

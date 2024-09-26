@@ -7,7 +7,9 @@ L'ensemble des sources et corrections du cours Langage C.
   - [Télécharger ou faire une copie du dépôt sur votre machine](#télécharger-ou-faire-une-copie-du-dépôt-sur-votre-machine)
   - [Sources](#sources)
     - [Module 02 - Tutoriel et premiers pas](#module-02---tutoriel-et-premiers-pas)
-  - [Module 03 - Expressions, types, opérateurs et conversion](#module-03---expressions-types-opérateurs-et-conversion)
+  - [Module 03 - Expressions, types, opérateurs et conversions](#module-03---expressions-types-opérateurs-et-conversions)
+  - [Module 04 - Structures de contrôle](#module-04---structures-de-contrôle)
+  - [Module 05 - Fonctions et procédures](#module-05---fonctions-et-procédures)
   - [Bibliographie](#bibliographie)
     - [Livres](#livres)
     - [Sur le web (articles, cours, exercices)](#sur-le-web-articles-cours-exercices)
@@ -38,10 +40,18 @@ git pull
 - [Accéder aux instructions pour installer l'environnement de développement](./installation-environnement-c.md) sur Windows, GNU/Linux et macOS;
 - [Accéder à la correction du tutoriel et aux sources C](./module-02-tutoriel-premiers-pas/):
 
-## Module 03 - Expressions, types, opérateurs et conversion
+## Module 03 - Expressions, types, opérateurs et conversions
 
-- Accéder à la correction des exercices
 - [Accéder aux démos live](./module-03-types-operateurs-conversions/demo-live/)
+- [Accéder aux corrections des exercices](./module-03-types-operateurs-conversions/corrections/)
+
+## Module 04 - Structures de contrôle
+
+> A venir
+
+## Module 05 - Fonctions et procédures
+
+> A venir
 
 ## Bibliographie
 

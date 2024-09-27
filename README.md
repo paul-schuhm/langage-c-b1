@@ -38,17 +38,17 @@ git pull
 ### Module 02 - Tutoriel et premiers pas
 
 - [Accéder aux instructions pour installer l'environnement de développement](./installation-environnement-c.md) sur Windows, GNU/Linux et macOS;
-- [Accéder à la correction du tutoriel et aux sources C](./module-02-tutoriel-premiers-pas/):
+- [Accéder à la correction du tutoriel et aux sources C](./module-02-tutoriel-premiers-pas/).
 
 ## Module 03 - Expressions, types, opérateurs et conversions
 
-- [Accéder aux démos live](./module-03-types-operateurs-conversions/demo-live/)
-- [Accéder aux corrections des exercices](./module-03-types-operateurs-conversions/corrections/)
+- [Accéder aux démos live](./module-03-types-operateurs-conversions/demo-live/);
+- [Accéder aux corrections des exercices](./module-03-types-operateurs-conversions/corrections/).
 
 ## Module 04 - Structures de contrôle
 
-- [Accéder aux démos live](./module-04-structures-controle/demo-live/)
-- [Accéder aux corrections des exercices](./module-04-structures-controle/corrections/)
+- [Accéder aux démos live](./module-04-structures-controle/demo-live/);
+- [Accéder aux corrections des exercices](./module-04-structures-controle/corrections/).
 
 ## Module 05 - Fonctions et procédures
 

@@ -47,7 +47,7 @@ git pull
 
 ## Module 04 - Structures de contrôle
 
-> A venir
+- [Accéder aux démos live](./module-04-structures-controle/demo-live/)
 
 ## Module 05 - Fonctions et procédures
 

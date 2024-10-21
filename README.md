@@ -52,7 +52,7 @@ git pull
 
 ## Module 05 - Fonctions et procédures
 
-> À venir
+- [Accéder aux démos](./module-05-fonctions/demos/)
 
 ## Bibliographie
 
@@ -67,7 +67,7 @@ git pull
 ### Sur le web (articles, cours, exercices)
 
 - [Apprenez à programmer en C](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c), d'OpenClassRoom (ex Site du zéro). Ce cours en ligne est un bon cours à suivre pour s'initier au langage C;
-- [Beej's Guide to C Programming](https://beej.us/guide/bgc/), un très bon cours sur le C [en ligne](https://beej.us/guide/bgc/html/split-wide/) ou en PDF (en);
+- [Beej's Guide to C Programming](https://beej.us/guide/bgc/), un très bon cours complet sur le C [en ligne](https://beej.us/guide/bgc/html/split-wide/) ou en PDF (en);
 - [Exercices de programmation en langage C](https://www.electro-info.ovh/exercices-de-programmation-langage-c-debutant);
 - [Exercices Interactifs](http://ressources.unit.eu/cours/Cfacile/co/Cours_C_facile_16.html);
 - [Compilateur C en ligne](https://www.mycompiler.io/fr/new/c), pratique pour tester rapidement des idées. Ctr+Entree pour compiler et executer son code.

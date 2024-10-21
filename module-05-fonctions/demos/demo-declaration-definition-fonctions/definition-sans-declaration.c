@@ -11,7 +11,8 @@
  *
  * Pourquoi ? Lorsque le compilateur analyse le programme, il rencontre
  * l'appel à foo AVANT sa définition, il n'y donc aucune garantie à ce 
- * moment là qu'elle existe. D où le warning "implicit declaration", ce
+ * moment là qu'elle existe et qu'elle soit bien utilisée (arguments corrects). 
+ * D'où le warning "implicit declaration", ce
  * qui indique que le compilateur utilise une declaration par défaut
  * de cette fonction.
  *

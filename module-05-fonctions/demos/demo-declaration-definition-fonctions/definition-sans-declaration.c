@@ -23,7 +23,8 @@
  *
  *
  * Remarque : essayer d'executer foo en lui passant des arguments, par ex foo(1,2).
- * Cela va compiler et s'executer alors qu'on ne respecte pas le prototype de foo !
+ * Cela va compiler (avec la version C89) et s'executer alors qu'on ne respecte pas le prototype de foo !
+ * La fonction peut donc éventuellement crasher le programme car elle est potentiellement mal utilisée.
  */
 int main(){
 	foo();

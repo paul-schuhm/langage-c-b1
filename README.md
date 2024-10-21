@@ -67,8 +67,7 @@ git pull
 ### Sur le web (articles, cours, exercices)
 
 - [The GNU C Reference Manual (en)](https://www.c-asm.com/gnu-c-manual.html), le manuel sur le C publié par le projet GNU est une bonne ressource pour apprendre et approfondir ses connaissances en C
-- [comp.lang.c Frequently Asked Questions (clc FAQ)](https://c-faq.com/index.html), faq sur le langage C, issue du groupe Usenet `comp.lang.c`. Composée et rafinée *depuis 1990*. A même [été publiée sous forme de livre par Addison-Wesley](https://c-faq.com/book/)
-ligne est un bon cours à suivre pour s'initier au langage C;
+- [comp.lang.c Frequently Asked Questions (clc FAQ)](https://c-faq.com/index.html), faq sur le langage C, issue du groupe Usenet `comp.lang.c`. Composée et rafinée *depuis 1990*. A même [été publiée sous forme de livre par Addison-Wesley](https://c-faq.com/book/) est un bon cours à suivre pour s'initier au langage C;
 - [Beej's Guide to C Programming](https://beej.us/guide/bgc/), un très bon cours complet sur le C [en ligne](https://beej.us/guide/bgc/html/split-wide/) ou en PDF (en);
 - [Apprenez à programmer en C](https://openclassrooms.com/fr/courses/19980-apprenez-a-programmer-en-c), d'OpenClassRoom (ex Site du zéro). Ce cours en 
 - [Exercices de programmation en langage C](https://www.electro-info.ovh/exercices-de-programmation-langage-c-debutant);

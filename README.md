@@ -5,8 +5,7 @@ L'ensemble des sources (démos commentées, suggestions de correction) du cours 
 
 - [B1 - Langage C](#b1---langage-c)
   - [Télécharger ou faire une copie du dépôt sur votre machine](#télécharger-ou-faire-une-copie-du-dépôt-sur-votre-machine)
-  - [Sources](#sources)
-    - [Module 02 - Tutoriel et premiers pas](#module-02---tutoriel-et-premiers-pas)
+  - [Module 02 - Tutoriel et premiers pas](#module-02---tutoriel-et-premiers-pas)
   - [Module 03 - Expressions, types, opérateurs et conversions](#module-03---expressions-types-opérateurs-et-conversions)
   - [Module 04 - Structures de contrôle](#module-04---structures-de-contrôle)
   - [Module 05 - Fonctions, portée et classes d'allocation](#module-05---fonctions-portée-et-classes-dallocation)
@@ -33,9 +32,7 @@ cd /chemin/depot/clone
 git pull
 ~~~
 
-## Sources
-
-### Module 02 - Tutoriel et premiers pas
+## Module 02 - Tutoriel et premiers pas
 
 - [Accéder aux instructions pour installer l'environnement de développement](./installation-environnement-c.md) sur Windows, GNU/Linux et macOS;
 - [Accéder à la correction du tutoriel et aux sources C](./module-02-tutoriel-premiers-pas/).

@@ -1,6 +1,6 @@
 # B1 - Langage C
 
-L'ensemble des sources, suggestions de correction du cours Langage C (1ère année).
+L'ensemble des sources (démos commentées, suggestions de correction) du cours Langage C (1ère année).
 
 
 - [B1 - Langage C](#b1---langage-c)

@@ -9,7 +9,7 @@ L'ensemble des sources (démos commentées, suggestions de correction) du cours 
   - [Module 03 - Expressions, types, opérateurs et conversions](#module-03---expressions-types-opérateurs-et-conversions)
   - [Module 04 - Structures de contrôle](#module-04---structures-de-contrôle)
   - [Module 05 - Fonctions, portée et classes d'allocation](#module-05---fonctions-portée-et-classes-dallocation)
-  - [Module 06 - Tableaux, pointeurs et pointeurs sur fonctions](#module-06---tableaux-pointeurs-et-pointeurs-sur-fonctions)
+  - [Module 06 - Tableaux, pointeurs et chaînes de caractères](#module-06---tableaux-pointeurs-et-chaînes-de-caractères)
   - [Bibliographie](#bibliographie)
     - [Livres](#livres)
     - [Sur le web (articles, cours, exercices)](#sur-le-web-articles-cours-exercices)
@@ -52,9 +52,10 @@ git pull
 
 - [Accéder aux démos](./module-05-fonctions/demos/)
 
-## Module 06 - Tableaux, pointeurs et pointeurs sur fonctions
+## Module 06 - Tableaux, pointeurs et chaînes de caractères
 
 - [Accéder aux démos](./module-06-pointeurs-tableaux/demos/)
+- [Accéder aux corrections des exercices](./module-06-pointeurs-tableaux/correction-exercices/)
 
 ## Bibliographie
 

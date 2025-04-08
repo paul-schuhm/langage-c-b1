@@ -10,6 +10,7 @@ L'ensemble des sources (démos commentées, suggestions de correction) du cours 
   - [Module 04 - Structures de contrôle](#module-04---structures-de-contrôle)
   - [Module 05 - Fonctions, portée et classes d'allocation](#module-05---fonctions-portée-et-classes-dallocation)
   - [Module 06 - Tableaux, pointeurs et chaînes de caractères](#module-06---tableaux-pointeurs-et-chaînes-de-caractères)
+  - [Module 07 - Struct, typedef et enum](#module-07---struct-typedef-et-enum)
   - [Bibliographie](#bibliographie)
     - [Livres](#livres)
     - [Sur le web (articles, cours, exercices)](#sur-le-web-articles-cours-exercices)
@@ -56,6 +57,11 @@ git pull
 
 - [Accéder aux démos](./module-06-pointeurs-tableaux-string//)
 - [Accéder aux corrections des exercices](./module-06-pointeurs-tableaux-string/correction-exercices/)
+
+## Module 07 - Struct, typedef et enum
+
+- [Accéder aux démos](./module-07-struct-enum-typedef/demos/)
+- [Accéder aux corrections des exercices](./module-07-struct-enum-typedef/correction/)
 
 ## Bibliographie
 

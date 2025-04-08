@@ -54,8 +54,8 @@ git pull
 
 ## Module 06 - Tableaux, pointeurs et chaînes de caractères
 
-- [Accéder aux démos](./module-06-pointeurs-tableaux/demos/)
-- [Accéder aux corrections des exercices](./module-06-pointeurs-tableaux/correction-exercices/)
+- [Accéder aux démos](./module-06-pointeurs-tableaux-string//)
+- [Accéder aux corrections des exercices](./module-06-pointeurs-tableaux-string/correction-exercices/)
 
 ## Bibliographie
 

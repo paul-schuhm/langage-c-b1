@@ -3,6 +3,22 @@
 
 #define N 12
 
+
+/*calcule la moyenne d'une série de notes. Passage d'un tableau en argument à une fonction*/
+float mean(float[]);
+
+float mean(float grades[]){
+
+	float sum = 0.;
+	for(int i = 0; i < N; i++){
+		sum += grades[i];
+	}
+
+	float mean = sum / N;
+
+	return mean;
+}
+
 int main(){
 
 	/*N notes de 0 à 20, on veut savoir combien d'étudiant/es ont une note > moyenne*/
@@ -15,21 +31,15 @@ int main(){
 	//Nos notes
 	float grades[N] = {15, 12, 6, 2, 4, 4.7, 0, 18, 7, 9, 5, 13.5};
 
-	//Calculer la moyenne
-	float sum = 0.;
-	for(int i = 0; i < N; i++){
-		sum += grades[i];
-	}
+	//Appel à une fonction, passage d'un tableau en arg
+	float average = mean(grades);
 
-	/*Moyenne des notes*/
-	float mean = sum / N;
-
-	printf("Moyenne des notes : %f\n", mean); 
+	printf("Moyenne des notes : %f\n", average); 
 
 	/*Afficher les notes supérieurs à la moyenne de la classe*/
 	int nb = 0;
 	for(int i = 0; i < N; i++){
-		if(grades[i] >= mean){
+		if(grades[i] >= average){
 			//Une note au dessus de la moyenne
 			//J'incrémente le compteur de note au dessus de la moyenne
 			nb++;

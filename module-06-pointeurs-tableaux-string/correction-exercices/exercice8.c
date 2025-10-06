@@ -1,31 +1,42 @@
 #include <stdio.h>
 #include <string.h>
-#define CAR 'e'
-#define LGMAX 132
 
-/*
-Écrire un programme qui supprime toutes les lettres “e” (minuscules) d’un texte de moins d’une
-ligne (supposée ne pas dépasser 132 caractères) fourni au clavier. Le texte ainsi modifié sera
-créé, en mémoire, à la place de l’ancien.
-*/
+/* Fonctions de manipulation de texte :
 
-/*
-Ce programme lit une ligne de texte, puis supprime toutes les occurrences du caractère CAR, en décalant le reste de la chaîne vers la gauche à chaque fois.
-*/
+   - strlen : compte le nombre de bytes
+   - strcat, strncat
+   - strcmp, strncmp
+   - strcpy, strncpy. Attention, Undefined Behavior si copie concerne des objets qui se recouvrent en mémoire ! Utiliser memmove() a la place
+   - strchr(char *, char) / strrchr
+   - strstr(char*, char*)
+ */
 
-int main()
-{
 
-    char texte[LGMAX + 1];
-    char *adr;
-    printf("donner un texte terminé par return\n");
-    fgets(texte, LGMAX + 1, stdin);
-    adr = texte;
-    while (adr = strchr(adr, CAR))
-    {
-        // Copie la sous-chaîne qui commence à l'adresse suivante (adr + 1) à la place de l’occurrence de CAR trouvée en adr.
-        strcpy(adr, adr + 1);
-    }
-    printf("voici votre texte privé de ses caractères %c\n", CAR);
-    puts(texte);
+#define LINE_W 120
+int main(){
+
+  char buffer[LINE_W + 1];
+
+  printf("Fournir un texte: ");
+  fgets(buffer, LINE_W + 1, stdin);
+
+  char* p = buffer;
+  size_t count_e = 0;
+  while(*p != '\0'){
+    if(*p++ == 'e')
+      count_e++; 
+  }
+  printf("Il y a %zu lettres e dans le texte\n", count_e); 
+  printf("Suppression de tous les caractères 'e'\n");
+
+  char* pos_e = buffer;
+  while( (pos_e =strchr(pos_e, 'e')) != NULL) {
+    memmove(pos_e, pos_e + 1, strlen(pos_e));
+  }
+
+  puts(buffer);
+
+
+  return 0;
+
 }

@@ -1,7 +1,7 @@
 #include "stdio.h"
 
-#define ROWS 3
-#define COLS 2
+#define ROWS 2
+#define COLS 3
 
 //Fonction qui affiche tableau 1d
 //Signature  : nom fonction, arg + type, type de retour (design)
@@ -35,6 +35,16 @@ void print_tab_2d(int tab[ROWS][COLS]){
       01000
       */
       printf("%d\n",tab[i][j]); 
+    }
+  }
+}
+
+/*Transforme tableau 2d en tableau 1d */
+void flatten_2d_array(char input[ROWS][COLS], char output[ROWS * COLS]){
+  size_t k = 0 ;
+  for(int i=0; i < ROWS; i++){
+    for(int j=0; j < COLS; j++){
+	output[k++] = input[i][j];
     }
   }
 }
@@ -116,10 +126,6 @@ int main(){
   //Grille, representation 2d, tableau a 2 dimensions (lignes, colonnes)
   // 0,0 0,1 1,0 1,1 2,0, 2,1
 
-  int tab2[ROWS][COLS] = {{1,2}, {3,4}, {5,6}};
-  //Parcourir tableau 2d :
-  print_tab_2d(tab2);
-
  //Procédure pour afficher un tableau 1d : ecriture de fonctions en C, passer tab en arg [x]
 
  //Fonctions : 1) déclaration de la fonction (signature, interface, prototype) : nom, type de retour, arg et leur type. Permettre de partager facilement le code, compilation va pouvoir vérifier.
@@ -136,9 +142,12 @@ int main(){
 
   Je veux obtenir :
     output == ['a', 'b', 'c', 'd', 'e', 'f']
-
-  void une_procedure_qui_applatit(input, output);
-
 */
+
+  char input[ROWS][COLS] = { {'a','b','c'}, {'d','e','f'} } ;
+  char output[ROWS * COLS];
+  flatten_2d_array(input, output);
+  for(int i = 0; i < ROWS * COLS ; i++)
+    printf("%c\n", output[i]);
  
 }

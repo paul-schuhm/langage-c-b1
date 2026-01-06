@@ -128,6 +128,7 @@ int main(){
 
 
  // VOUS POUVEZ SIGNER !
+ // Code sur le dépot ! (cf lien dans la discussion réunion)
 
  /*Exercice : Procédure pour "applatir un tableau 2d en un tableau 1d". Transformer un tableau 2d en tableau 1d.
 

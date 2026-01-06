@@ -21,9 +21,9 @@ void print_tab_1d(int tab[], size_t n){
 //Solution générale : void print_2d_array(int **tab, int rows, int cols);
 
 /*Imprime un tableau 2d sur la sortie standard. Chaque élément est écrit sur une ligne.*/
-void print_tab_2d(int tab[][COLS]);
+void print_tab_2d(int tab[ROWS][COLS]);
 
-void print_tab_2d(int tab[][COLS]){
+void print_tab_2d(int tab[ROWS][COLS]){
   for(int i=0; i < ROWS; i++){
     for(int j=0; j < COLS; j++){
       //Afficher sous forme de grille
@@ -38,6 +38,53 @@ void print_tab_2d(int tab[][COLS]){
     }
   }
 }
+
+/*
+SYNTHESE de ce matin :
+
+- Un tableau c'est un pointeur CONSTANT sur le 1er élément [x] ;
+- Un tableau ne peut contenir que des éléments de même type (int, float, char, etc.) a cause de l'arithmétique des pointeurs
+
+ p  p+1 
+ |  |
+ v  v
+[1][2][3][][][][][][][]...[101]
+
+Exemples :
+int tableau[100] : un tableau de 100 int
+float tableau[3] : un tableau de 3 float
+
+- Un pointeur = une variable qui contient l'adresse d'une autre variable. Un tableau c'est juste un usage des pointeurs.
+- Obtenir l'adresse d'une variable avec l'opérateur &. Par ex, &i est l'adresse de i.
+- Déclarer un pointeur : type* nom_pointeur
+
+int* p = tableau ;
+
+Il faut donner un type au pointeur pour pouvoir le déférencer !
+
+Exemple :
+			      v     
+[?][?][][][][][][[][][][][][][c][][][][][][][]...
+
+char c = 'b';
+char* p =  &c;
+*p = 'a';
+
+- A partir du 1er element, je peux acceder a tous les autres en déplacant le pointeur : tab, tab + 1, tab + 2, tab+3, etc.
+- Un tableau 2d = un tableau ou chaque element est un tableau.
+
+Ex: int grid[5][2] est un tableau de 5 éléments. Chaque élément est lui meme un tableau de 2 éléments.
+
+- grid[i][j] pour accéder a l'élément i,j. Equivalent a *(*(grid+i)+j)
+- Passer un tableau en arg a une fonction : passer le pointeur sur 1 element !
+print_array_1d(int* t, size_t n);
+print_array_1d(int t[], size_t n);
+- Passer un tableau 2d (et dim supérieures) a une fonction : passer tableau en indiquant la deuxieme dimension. Sinon, le compilateur ne sait pas faire arithmétique pointeur (avancer, reculer)
+
+print_array_2d(int t[][COLS]);
+
+
+*/
 
 
 int main(){

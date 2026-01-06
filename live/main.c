@@ -18,13 +18,22 @@ void print_tab_1d(int tab[], size_t n){
 }
 
 //Procédure pour afficher un tableau 2d
+//Solution générale : void print_2d_array(int **tab, int rows, int cols);
 
 /*Imprime un tableau 2d sur la sortie standard. Chaque élément est écrit sur une ligne.*/
-void print_tab_2d(int tab[][], size_t rows, size_t cols);
+void print_tab_2d(int tab[][COLS]);
 
-void print_tab_2d(int tab[][], size_t rows, size_t cols){
+void print_tab_2d(int tab[][COLS]){
   for(int i=0; i < ROWS; i++){
     for(int j=0; j < COLS; j++){
+      //Afficher sous forme de grille
+      /*
+      01000
+      01111
+      01110
+      10100
+      01000
+      */
       printf("%d\n",tab[i][j]); 
     }
   }
@@ -64,7 +73,7 @@ int main(){
 
   int tab2[ROWS][COLS] = {{1,2}, {3,4}, {5,6}};
   //Parcourir tableau 2d :
-  print_tab_2d(tab2, ROWS, COLS);
+  print_tab_2d(tab2);
 
  //Procédure pour afficher un tableau 1d : ecriture de fonctions en C, passer tab en arg [x]
 

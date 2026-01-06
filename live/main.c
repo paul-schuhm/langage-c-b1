@@ -83,9 +83,7 @@ print_array_1d(int t[], size_t n);
 
 print_array_2d(int t[][COLS]);
 
-
 */
-
 
 int main(){
 
@@ -125,10 +123,21 @@ int main(){
  //Procédure pour afficher un tableau 1d : ecriture de fonctions en C, passer tab en arg [x]
 
  //Fonctions : 1) déclaration de la fonction (signature, interface, prototype) : nom, type de retour, arg et leur type. Permettre de partager facilement le code, compilation va pouvoir vérifier.
+
  //Procédure pour afficher un tableau 2d [x]
 
- //Procédure pour "applatir un tableau 2d en un tableau 1d"
 
+ // VOUS POUVEZ SIGNER !
 
+ /*Exercice : Procédure pour "applatir un tableau 2d en un tableau 1d". Transformer un tableau 2d en tableau 1d.
+
+  char input[2][3] = { {'a','b','c'}, {'d','e','f'} } ;
+
+  Je veux obtenir :
+    output == ['a', 'b', 'c', 'd', 'e', 'f']
+
+  void une_procedure_qui_applatit(input, output);
+
+*/
  
 }

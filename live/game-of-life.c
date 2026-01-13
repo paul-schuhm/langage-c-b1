@@ -123,14 +123,13 @@ void update_game(int grid[NROWS][NCOLS], int next[NROWS][NCOLS]){
     }
   }
 }
-void copy(int next[NROWS][NCOLS], int grid[NROWS][NCOLS]){
 
+void copy(int next[NROWS][NCOLS], int grid[NROWS][NCOLS]){
   for(int i = 0; i < NROWS; i++){
     for(int j = 0; j < NCOLS; j++){
       grid[i][j] = next[i][j];
     }
   }
-
 }
 
 int main(){
@@ -147,19 +146,21 @@ int main(){
   //  {0 , 0 , 0 , 0 , 0},
   //  {0 , 0 , 0 , 0 , 0},
   //};
-  /*Copie du nouvel état du monde*/
+
   int grid[NROWS][NCOLS];
+  /*Copie du nouvel état du monde*/
   int next[NROWS][NCOLS] = {0};
 
   init_game(grid, NROWS, NCOLS);
 
   for(int t = 0 ; t < NSTEPS ; t++){
+    printf("t=%d/%d (%.2f %%)\n", t+1, NSTEPS, (float)(t+1)/NSTEPS * 100);
     print_game(grid, NROWS, NCOLS);
     update_game(grid, next);
     copy(next, grid);
+    /*attend 1 seconde avant de poursuivre l'execution */
     sleep(1);
-    printf("\n");
-
+    printf("\n\n");
   }
 
   return 0;

@@ -13,9 +13,9 @@
 */
 
 /*Dimension verticale*/
-#define NROWS 5
+#define NROWS 3
 /*Dimension horizontale*/
-#define NCOLS 12
+#define NCOLS 3
 /*Nombre de pas de temps de simulation*/
 #define NSTEPS 2
 
@@ -57,7 +57,7 @@ void init_game(int grid[NROWS][NCOLS], size_t nrows, size_t ncols){
 
 
 int is_in_grid(int i, int j){
-	return i < 0 || i >= NROWS || j < 0 || j >= NCOLS;
+	return i >= 0 || i < NROWS || j >= 0 || j < NCOLS;
 }
 
 
@@ -66,12 +66,12 @@ int count_neighbors_alived(int grid[NROWS][NCOLS], int i, int j){
 	//8 voisins autour de (i,j)
 	for(int di = -1 ; di <=1 ; di++){
 		for(int dj = -1 ; dj <= 1; dj++){
-
 			//Indice d'une cellule voisine
 			int ni = i + di ;
 			int nj = j + dj;
 			//Les indices ne correspondent a aucune cellule (hors grille), passe au suivant.
 			if(!is_in_grid(ni,nj)){
+				printf("%d %d is not in grid\n", ni, nj);
 				continue;
 			}
 
@@ -90,24 +90,32 @@ int count_neighbors_alived(int grid[NROWS][NCOLS], int i, int j){
 int main(){
 
 	/*Monde*/
-	int grid[NROWS][NCOLS];
-	//init_game(grid, NROWS, NCOLS);
-	//print_game(grid, NROWS, NCOLS);
-	////Nouvel état du monde (1 pas) : t + 1
-	//for(int i = 0; i < NROWS; i++){
-	//	for(int j = 0; j < NCOLS; j++){
-	//		//Pour chaque cellule (i,j)
-	//		// 1. Compter le nombre de voisins vivants.
-	//		/* 2. Regles :
-	//		   - Si morte ET 3 voisins vivantes => vivante
-	//		   - Si vivante ET NON 2 ou 3 voisins vivantes => morte
-	//		 */ 
-
-	//		//Parcourir les voisins
-	//	}
-	//}
-
-	count_neighbors_alived(grid, 0, 0);
+	int grid[NROWS][NCOLS] = {
+		{0, 0 , 0},
+		{0, 1 , 0},
+		{0, 0 , 0},
+ 	};
+	int next[NROWS][NCOLS] ;
+	init_game(grid, NROWS, NCOLS);
+	print_game(grid, NROWS, NCOLS);
+	//Nouvel état du monde (1 pas) : t + 1
+	for(int i = 0; i < NROWS; i++){
+		for(int j = 0; j < NCOLS; j++){
+			//Pour chaque cellule (i,j)
+			// 1. Compter le nombre de voisins vivants.
+			/* 2. Regles :
+			   - Si morte ET 3 voisins vivantes => vivante
+			   - Si vivante ET NON 2 ou 3 voisins vivantes => morte
+			 */ 
+			//Parcourir les voisins
+			int n = count_neighbors_alived(grid, i, j);	
+//Regles
+			if(grid[i][j] == 1 && (n != 2 || n !=3 )){
+				//La cellule i,j meurt	
+				next[i][j] = 0;
+			}
+		
+	}
 
 	return 0;
 }

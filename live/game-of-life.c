@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 /* 1. Définir la taille du jeu (dimensions grilles, durée de sim.) [x]
    2. Initialiser le jeu [x]
@@ -14,9 +15,9 @@
 */
 
 /*Dimension verticale*/
-#define NROWS 5
+#define NROWS 30
 /*Dimension horizontale*/
-#define NCOLS 5
+#define NCOLS 150
 /*Nombre de pas de temps de simulation*/
 #define NSTEPS 100
 
@@ -137,23 +138,28 @@ int main(){
   srand((unsigned int) time(NULL));
 
   /*Monde*/
-  int grid[NROWS][NCOLS] = {
-    {0 , 0 , 0 , 0 , 0},
-    {0 , 0 , 0 , 0 , 0},
-    {0 , 1 , 1 , 1 , 0},
-    {0 , 0 , 0 , 0 , 0},
-    {0 , 0 , 0 , 0 , 0},
-  };
+
+  /*Pattern spécial : 'Blinker' (period 2). Cette structure doit osciller indéfiniment. Bien pour tester.*/
+  //int grid[NROWS][NCOLS] = {
+  //  {0 , 0 , 0 , 0 , 0},
+  //  {0 , 0 , 0 , 0 , 0},
+  //  {0 , 1 , 1 , 1 , 0},
+  //  {0 , 0 , 0 , 0 , 0},
+  //  {0 , 0 , 0 , 0 , 0},
+  //};
   /*Copie du nouvel état du monde*/
+  int grid[NROWS][NCOLS];
   int next[NROWS][NCOLS] = {0};
 
-  //init_game(grid, NROWS, NCOLS);
+  init_game(grid, NROWS, NCOLS);
 
   for(int t = 0 ; t < NSTEPS ; t++){
     print_game(grid, NROWS, NCOLS);
     update_game(grid, next);
     copy(next, grid);
+    sleep(1);
     printf("\n");
+
   }
 
   return 0;

@@ -6,13 +6,13 @@
 /* 1. Définir la taille du jeu (dimensions grilles, durée de sim.) [x]
    2. Initialiser le jeu [x]
    3. Boucle sur le temps :
-	Mettre à jour le jeu t => t + 1 :
-		Pour chaque cellule :
-			1. Compter nb voisins vivants
-			2. En fonction de son état et du nb de voisins, calculer son nouvel état (t+1)
-			3. Mettre à jour son etat (t+1)
-   		4. Afficher etat du jeu (t)
-*/
+   Mettre à jour le jeu t => t + 1 :
+   Pour chaque cellule :
+   1. Compter nb voisins vivants
+   2. En fonction de son état et du nb de voisins, calculer son nouvel état (t+1)
+   3. Mettre à jour son etat (t+1)
+   4. Afficher etat du jeu (t)
+ */
 
 /*Dimension verticale*/
 #define NROWS 30
@@ -39,69 +39,72 @@ void copy(int next[NROWS][NCOLS], int grid[NROWS][NCOLS]);
 
 // =====  Définitions (implémentations)
 void print_game(int grid[NROWS][NCOLS], size_t nrows, size_t ncols){
-	for(int i = 0; i < NROWS; i++){
-		for(int j = 0; j < NCOLS; j++){
-			//Représentation d'une cellule (opérateur ternaire ?)
-			//expression ? valeur si vrai (1) : valeur si faux (0 ici).
-			char symbol = grid[i][j] ? 'X' : '.';			
-			printf("%c", symbol);
-		}
-		printf("\n");
-	}
+  for(int i = 0; i < NROWS; i++){
+    for(int j = 0; j < NCOLS; j++){
+      //Représentation d'une cellule (opérateur ternaire ?)
+      //expression ? valeur si vrai (1) : valeur si faux (0 ici).
+      char symbol = grid[i][j] ? 'X' : '.';			
+      printf("%c", symbol);
+    }
+    printf("\n");
+  }
 }
 
 
 void init_game(int grid[NROWS][NCOLS], size_t nrows, size_t ncols){
-	/*Initialise monde/etat du jeu*/
-	for(int i = 0; i < NROWS; i++){
-		for(int j = 0; j < NCOLS; j++){
-			//50% chance d'etre vivant ou mort
-			grid[i][j] = rand() % 2 ;
-		}
-	}
+  /*Initialise monde/etat du jeu*/
+  for(int i = 0; i < NROWS; i++){
+    for(int j = 0; j < NCOLS; j++){
+      //50% chance d'etre vivant ou mort
+      grid[i][j] = rand() % 2 ;
+    }
+  }
 }
 
 
 int is_in_grid(int i, int j){
-	return i >= 0 && i < NROWS && j >= 0 && j < NCOLS;
+  return i >= 0 && i < NROWS && j >= 0 && j < NCOLS;
 }
 
 
 int count_neighbors_alived(int grid[NROWS][NCOLS], int i, int j){
-	int count = 0;
-	//8 voisins autour de (i,j)
-	for(int di = -1 ; di <=1 ; di++){
-		for(int dj = -1 ; dj <= 1; dj++){
-			//Indice d'une cellule voisine
-			int ni = i + di ;
-			int nj = j + dj;
-			//Les indices ne correspondent a aucune cellule (hors grille), passe au suivant.
-			if(!is_in_grid(ni,nj)){
-				continue;
-			}
+  int count = 0;
+  //8 voisins autour de (i,j)
+  for(int di = -1 ; di <=1 ; di++){
+    for(int dj = -1 ; dj <= 1; dj++){
+      //Indice d'une cellule voisine
+      int ni = i + di ;
+      int nj = j + dj;
+      //Les indices ne correspondent a aucune cellule (hors grille), passe au suivant.
+      if(!is_in_grid(ni,nj)){
+	continue;
+      }
 
-			//Ne pas prendre en compte la cellule inspectée, seulement ses voisines !
-			if(ni == i && nj == j){
-				continue;
-			}
+      //Ne pas prendre en compte la cellule inspectée, seulement ses voisines !
+      if(ni == i && nj == j){
+	continue;
+      }
 
-			if(grid[ni][nj] == 1)
-				count++;
-		}
-	}
-	return count;
+      if(grid[ni][nj] == 1)
+	count++;
+    }
+  }
+  return count;
 }
 
 
 void update_game(int grid[NROWS][NCOLS], int next[NROWS][NCOLS]){
+  // Pour chaque cellule : 
+  // 1. Compter le nombre de voisins vivants.
+  /* 2. Regles d'évolution :
+     - a) Si vivante ET NON 2 ou 3 voisins vivantes => morte
+     - b) Si morte ET 3 voisins vivantes => vivante
+   */ 
   for(int i = 0; i < NROWS; i++){
     for(int j = 0; j < NCOLS; j++){
-      // 1. Compter le nombre de voisins vivants.
-      /* 2. Regles :
-	 - a) Si vivante ET NON 2 ou 3 voisins vivantes => morte
-	 - b) Si morte ET 3 voisins vivantes => vivante
-       */ 
+
       int n_alived = count_neighbors_alived(grid, i, j);	
+
       if(grid[i][j] == 1){
 	//Regle a)
 	if(n_alived == 2 || n_alived == 3){

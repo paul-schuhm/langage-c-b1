@@ -36,6 +36,13 @@ int d2(){
 //un tableau et le remplit de valeurs aléatoires 0 ou 1.
 
 
+void fill_random(int arr[], size_t size){
+	for(int i = 0 ; i < size; i++){
+		arr[i] = random_int(0, 1);
+	}
+}
+
+
 
 int main(){
 
@@ -45,8 +52,11 @@ int main(){
         //nouvelle execution du programme.
 	srand( (unsigned int) time(NULL));
 
-	//Fonction de base 'rand()'
-	for(int i = 0 ;i < N; i++){
-		printf("%d ", d6()); 
-	} 
+	int arr[N];
+	fill_random(arr, N);
+	for(int i = 0 ; i < N ; i++){
+		printf("%d ", arr[i]);
+	}
+
+
 }

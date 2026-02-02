@@ -4,13 +4,13 @@
 /* 1. Définir la taille du jeu (dimensions grilles, durée de sim.) [x]
    2. Initialiser le jeu [x]
    3. Boucle sur le temps :
-	Mettre à jour le jeu t => t + 1 :
-		Pour chaque cellule :
-			1. Compter nb voisins vivants
-			2. En fonction de son état et du nb de voisins, calculer son nouvel état (t+1)
-			3. Mettre à jour son etat (t+1)
-   		4. Afficher etat du jeu (t)
-*/
+   Mettre à jour le jeu t => t + 1 :
+   Pour chaque cellule :
+   1. Compter nb voisins vivants
+   2. En fonction de son état et du nb de voisins, calculer son nouvel état (t+1)
+   3. Mettre à jour son etat (t+1)
+   4. Afficher etat du jeu (t)
+ */
 
 /*Dimension verticale*/
 #define NROWS 3
@@ -89,15 +89,21 @@ int count_neighbors_alived(int grid[NROWS][NCOLS], int i, int j){
 
 int main(){
 
+
+
 	/*Monde*/
 	int grid[NROWS][NCOLS] = {
 		{0, 0 , 0},
 		{0, 1 , 0},
 		{0, 0 , 0},
- 	};
+	};
+
 	int next[NROWS][NCOLS] ;
+
 	init_game(grid, NROWS, NCOLS);
+
 	print_game(grid, NROWS, NCOLS);
+
 	//Nouvel état du monde (1 pas) : t + 1
 	for(int i = 0; i < NROWS; i++){
 		for(int j = 0; j < NCOLS; j++){
@@ -109,13 +115,15 @@ int main(){
 			 */ 
 			//Parcourir les voisins
 			int n = count_neighbors_alived(grid, i, j);	
-//Regles
+            
+			//Regles
 			if(grid[i][j] == 1 && (n != 2 || n !=3 )){
 				//La cellule i,j meurt	
 				next[i][j] = 0;
 			}
-		
-	}
 
-	return 0;
+		}
+
+		return 0;
+	}
 }

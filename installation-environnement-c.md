@@ -4,7 +4,7 @@
 
 Paul Schuhmacher
 
-Septembre 2024
+Septembre 2026
 
 Module: Langage C
 
@@ -17,26 +17,27 @@ Module: Langage C
     - [Méthode 1 - Environnement de développement sur une distribution GNU/Linux](#méthode-1---environnement-de-développement-sur-une-distribution-gnulinux)
       - [Erreurs rencontrées et configuration de Windows](#erreurs-rencontrées-et-configuration-de-windows)
     - [Méthode 2 - Environnement de développement sur Windows directement](#méthode-2---environnement-de-développement-sur-windows-directement)
-  - [Installer le compilateur gcc sur macOS](#installer-le-compilateur-gcc-sur-macos)
+  - [Installer le compilateur sur macOS](#installer-le-compilateur-sur-macos)
   - [Conclusion](#conclusion)
+    - [Annexes : Travailler avec VS Code sur la WSL](#annexes--travailler-avec-vs-code-sur-la-wsl)
     - [Annexes : Se déplacer dans le terminal de Windows (Invite de commandes ou PowerShell)](#annexes--se-déplacer-dans-le-terminal-de-windows-invite-de-commandes-ou-powershell)
     - [Annexes : Se déplacer dans un shell UNIX (GNU/Linux et macOS)](#annexes--se-déplacer-dans-un-shell-unix-gnulinux-et-macos)
 
 
-Pour développer en C, nous avons besoins de trois outils :
+Pour développer en C, nous avons besoins de *trois outils* :
 
-- Un éditeur de texte (Vs Code);
-- Un compilateur C. Nous allons utiliser (de préférence) le compilateur C de gcc ([GNU Compiler Collection](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection));
-- La librairie standard : déclarations (fichiers *headers*) et implémentation (binaires)
+- **Un compilateur C**. Nous allons utiliser (de préférence) le compilateur C de gcc ([GNU Compiler Collection](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection));
+- La bibliothèque standard : déclarations (fichiers *headers*) et implémentation (binaires). Cette bibliothèque sera installée automatiquement avec le compilateur
+- Un éditeur de texte (VS Code ou autre) pour éditer nos sources
 
 ## Installer le compilateur C sur Ubuntu/Debian
 
 Dans un terminal :
 
 ~~~bash
-#Installer le compilateur gcc
+# Installer le compilateur gcc
 sudo apt install gcc
-#Tester l'installation (cc ou gcc)
+# Tester l'installation (cc ou gcc)
 cc --version
 cc --help
 ~~~
@@ -54,8 +55,8 @@ Sur Windows, on a le choix :
 
 ### Méthode 1 - Environnement de développement sur une distribution GNU/Linux
 
-- [Installer WSL2](https://learn.microsoft.com/fr-fr/windows/wsl/install)
-- Installer une distribution GNU/Linux Ubuntu
+1. [Installer WSL2](https://learn.microsoft.com/fr-fr/windows/wsl/install)
+2. Installer une distribution GNU/Linux Ubuntu
 
 Pour télécharger et installer WSL 2, vous pouvez vous rendre sur [la page officielle de Microsoft](https://learn.microsoft.com/fr-fr/windows/wsl/install) et suivre les instructions.
 
@@ -88,10 +89,12 @@ Repérer le système de fichiers de votre distribution Ubuntu depuis Windows et 
 
 Voici votre flot de travail :
 
-- Ouvrir VS Code sur Windows;
-- Ouvrir le dossier `/home/<votre utilisateur>/langage-c` de votre distribution GNU/Linux;
-- Éditer votre code dans VS Code
-- Lancer votre distribution Ubuntu (lancer l'application) puis compiler dans le terminal de votre distribution Ubuntu.
+1. Ouvrir VS Code ;
+2. Ouvrir votre répertoire de travail sur Winwows (ex : `Documents/langage-c`)
+3. Éditer votre code dans VS Code (ex: fichier `hello.c`)
+4. Lancer un terminal Ubuntu (WSL)
+5. Compiler votre programme depuis l'instance WSL `gcc hello.c`
+6. Executer le programme : `./a.out`
 
 #### Erreurs rencontrées et configuration de Windows
 
@@ -102,7 +105,7 @@ Pour exécuter WSL 2, vous devez au préalable *activer la plateforme de machine
 Pour activer la plateforme de virtualisation, redémarrer votre machine, appuyez sur `F2` ou la touche indiquée indiquée par votre carte-mère pour accéder au BIOS. Vous devez également vous assurer que les fonctionnalités Plateforme de l'hyperviseur Windows et Plateforme de machine virtuelle sont bien activées. Tapez `“fonctionnalités windows”` dans votre barre de recherche, puis activez-les. **Redémarrez votre machine**. 
 
 
-<img width="80%" src="./assets/wsl.png"/>
+<img width="80%" src="../assets/wsl.png"/>
 
 Vérifier l'installation en tapant la commande suivante dans l'invite de commande windows :
 
@@ -150,23 +153,22 @@ gcc --version
 
 > Vous pouvez aussi installer et utiliser le compilateur [`clang`](https://fr.wikipedia.org/wiki/Clang) que vous pouvez installer via la suite [Visual Studio](https://visualstudio.microsoft.com/fr/downloads/) natif à Windows. Les options du compilateur ne seront pas les mêmes. [Suivre cette procédure](https://learn.microsoft.com/fr-fr/cpp/build/walkthrough-compile-a-c-program-on-the-command-line?view=msvc-170#prerequisites)
 
-## Installer le compilateur gcc sur macOS
+## Installer le compilateur sur macOS
 
-Ouvrir un terminal.
-
-- Installer les outils de la suite Xcode
+1. Ouvrir un terminal
+2. Installer les outils de la suite Xcode :
 
 ~~~bash
 xcode-select --install
 ~~~
 
-- Installer [le gestionnaire de paquets homebrew](https://brew.sh/)
+3. Installer [le gestionnaire de paquets homebrew](https://brew.sh/) :
 
 ~~~bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ~~~
 
-- Installer `gcc` via homebrew
+4. Installer `gcc` via homebrew
 
 ~~~bash
 brew install gcc
@@ -181,6 +183,27 @@ A la fin de cette étape, vous devez :
 - Avoir un compilateur C fonctionnel (de préférence `gcc`, ou clang);
 - Avoir installé l'éditeur VS Code.
 - Savoir vous déplacer dans un terminal Windows ou UNIX (GNU/Linux et macOS);
+
+### Annexes : Travailler avec VS Code sur la WSL
+
+Pour travailler avec VS Code, *comme si* vous étiez sous Windows (de manière transparente), et sans avoir de problèmes de droits lors de la création de fichiers par exemple (par défaut tout fichier crée depuis Windows sur la partition Linux appartient à `root`, pas à votre utilisateur !), il faut faire une petite configuration :
+
+1. Installer VS Code sur Windows. **Ne pas installer** VS Code sur la distribution Linux;
+2. Dans VS Code sur Windows, installer l'extention dédiée [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack);
+3. Lancez votre distribution Linux (Ubuntu par défaut);
+4. Dans le shell linux, **lancer** VS Code :
+
+~~~bash
+code
+~~~
+
+La WSL va installer des paquets et vous ouvrir l'interface graphique de VS Code. Vous pouvez commencer à travailler !
+
+Comme on travaille sur la WSL, **lancer toujours VS Code depuis la WSL.**
+
+Conseil : créer un **bookmark** de l'emplacement de votre répertoire utilisateur sous linux `/home/votre-user` dans votre explorateur de fichiers Windows pour y **revenir facilement**.
+
+> [Voir le guide officiel de Microsoft](https://learn.microsoft.com/fr-fr/windows/wsl/tutorials/wsl-vscode)
 
 ### Annexes : Se déplacer dans le terminal de Windows (Invite de commandes ou PowerShell)
 

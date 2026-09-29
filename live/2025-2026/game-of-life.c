@@ -137,34 +137,40 @@ void copy(int next[NROWS][NCOLS], int grid[NROWS][NCOLS]){
 
 int main(){
 
-  srand((unsigned int) time(NULL));
 
-  /*Monde*/
 
-  /*Pattern spécial : 'Blinker' (period 2). Cette structure doit osciller indéfiniment. Bien pour tester.*/
-  //int grid[NROWS][NCOLS] = {
-  //  {0 , 0 , 0 , 0 , 0},
-  //  {0 , 0 , 0 , 0 , 0},
-  //  {0 , 1 , 1 , 1 , 0},
-  //  {0 , 0 , 0 , 0 , 0},
-  //  {0 , 0 , 0 , 0 , 0},
-  //};
+	/*Monde*/
+	int grid[NROWS][NCOLS] = {
+		{0, 0 , 0},
+		{0, 1 , 0},
+		{0, 0 , 0},
+	};
 
-  int grid[NROWS][NCOLS];
-  /*Copie du nouvel état du monde*/
-  int next[NROWS][NCOLS] = {0};
+	int next[NROWS][NCOLS] ;
 
-  init_game(grid, NROWS, NCOLS);
+	init_game(grid, NROWS, NCOLS);
 
-  for(int t = 0 ; t < NSTEPS ; t++){
-    printf("t=%d/%d (%.2f %%)\n", t+1, NSTEPS, (float)(t+1)/NSTEPS * 100);
-    print_game(grid, NROWS, NCOLS);
-    update_game(grid, next);
-    copy(next, grid);
-    /*attend 1 seconde avant de poursuivre l'execution */
-    sleep(1);
-    printf("\n\n");
-  }
+	print_game(grid, NROWS, NCOLS);
 
-  return 0;
+	//Nouvel état du monde (1 pas) : t + 1
+	for(int i = 0; i < NROWS; i++){
+		for(int j = 0; j < NCOLS; j++){
+			//Pour chaque cellule (i,j)
+			// 1. Compter le nombre de voisins vivants.
+			/* 2. Regles :
+			   - Si morte ET 3 voisins vivantes => vivante
+			   - Si vivante ET NON 2 ou 3 voisins vivantes => morte
+			 */ 
+			//Parcourir les voisins
+			int n = count_neighbors_alived(grid, i, j);	
+            
+			//Regles
+			if(grid[i][j] == 1 && (n != 2 || n !=3 )){
+				//La cellule i,j meurt	
+				next[i][j] = 0;
+			}
+
+		}
+
+		return 0;
 }
